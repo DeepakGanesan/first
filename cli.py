@@ -6,6 +6,7 @@ with open(r"first\configs\input.yaml", "rb") as f:
 
 import first.preprocess.analyze as ace
 
+
 def cli():
     parser = argparse.ArgumentParser(description="Analyze any pandas dataframe")
     parser.add_argument("-x", "--xvar", type=int, help="1 for analyzing")
