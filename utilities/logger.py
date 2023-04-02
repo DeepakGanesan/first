@@ -14,12 +14,12 @@ class Customlogger:
         # Create a stream handler
         self.sh = logging.StreamHandler()
         # Create a filehandler
-        self.fh = logging.FileHandler(path)
+        self.fh = logging.FileHandler(path, mode='w')
 
     def create_log(self):
 
         # Create formatter
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(funcName)s  - %(message)s')
 
         self.sh.setLevel(logging.DEBUG)
         self.fh.setLevel(logging.DEBUG)
