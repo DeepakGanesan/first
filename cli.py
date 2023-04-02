@@ -1,10 +1,17 @@
 import argparse
 import yaml
 
+import first.preprocess.analyze as ace
+from first.utilities.logger import Customlogger
+
 with open(r"first\configs\input.yaml", "rb") as f:
     config = yaml.safe_load(f)
 
-import first.preprocess.analyze as ace
+mylogger = Customlogger('__name__',config['data']['log'])
+logger = mylogger.create_log()
+
+logger.info("Creating log file")
+
 
 
 def cli():
